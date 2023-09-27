@@ -45,7 +45,7 @@ AddSubClass("druid", "circle of fungi", {
 			spellChanges : {
 				"spare the dying" : {
 					time : "1 a",
-					description : "You touch a living creature that has 0 hit points. The creature gains 1 hit point. This spell has no effect on undead or constructs.",
+					description : "A living creature that has 0 hit points that you can see within range gains 1 hit point. This spell has no effect on undead or constructs.",
 					range : "30 ft"
 				}
 			},
@@ -56,20 +56,20 @@ AddSubClass("druid", "circle of fungi", {
 			source : ["P:NS",0],
 			minlevel : 2,
  			description : desc([
-				"As a reaction when someone I can see in 10 ft starts its turn or moves, I can have it save",
-				"It must succeed on a Constitution save or take necrotic damage from my cloud of spores and be slowed by 5ft",
-                "On a success, it chooses one effect"
+				"I am surrounded by a 10ft sphere of my Culture of Spores
+				"All creatures of my choice within my Spores have their speed reduced by 5ft.",
+				"Once one each of my turns, I can choose one creature within my Culture of Spores, and deal necrotic damage to it"
 			]),
-			additional : levels.map(function (n) { return n < 2 ? "" : 'Con save or 1d' + (n < 6 ? 4 : n < 10 ? 6 : n < 14 ? 8 : n < 17 ? 10 : 12) + " necrotic damage"; }),
-			action : ["reaction", ""]
+			additional : levels.map(function (n) { return n < 2 ? "" : '1d' + (n < 6 ? 4 : n < 10 ? 6 : n < 14 ? 8 : n < 17 ? 10 : 12) + " necrotic damage"; }),
+			action : ["", "once each of my turns"]
 		},
 		"subclassfeature2.2" : {
-			name : "Symbiotic Entity",
+			name : "Symbiote",
 			source : ["P:NS", 0],
 			minlevel : 2,
 			description : desc([
 				"As an action, I can expend a Wild Shape use to boost my spores instead of transforming",
-				"I gain 4 temporary hit points per druid level, my Culture of Spores damage increases, and the speed decrease doubles",
+				"I gain 4 temporary hit points per druid level, I can deal my Culture of Spores damage twice each turn, and the speed decrease doubles",
 				"This lasts for 10 min, until these temporary HP run out, or until I use Wild Shape again",
                 "At 10th and 14th level, I gain a new feature for my symbiotic entity. Use \"choose feature\" above"
 			]),
@@ -83,79 +83,29 @@ AddSubClass("druid", "circle of fungi", {
 			source : ["P:NS",0],
 			minlevel : 6,
 			description : desc([
-				"As a reaction, at the end of a turn in which an ally deals damage to a hostile creature, I can reallocate the same value of HP as damage dealt in that ally's turn to the creature any creatures.",
-                "All of the Attacker, Target, and those being healed must be in my Culture of Spores.",
+				"After an ally within my Culture of Spores deals damage on their turn to a hostile creature, I can use a reaction to heal any number of creatures within my Culture of Spores by up to a total of half (rounded up) of the damage that ally did on their turn.",
+	    			"Each time a hostile creature dies in my Culture of Spores, my Culture of Spores damage increases by +1 until my next rest, and I regain one expended first level spell slot."
 			]),
 			action : ["reaction", ""]
 		},
 		"subclassfeature10" : {
-			name : "Fungal Network",
+			name : "Enriching Spores",
 			source : ["P:NS",0],
 			minlevel : 10,
 			description : desc([
-				"I can drop my concentration on a spell while its effects continue for their full duration.",
-                "If I concentrate on another effect during this time, I roll concentration saves with disadvantage and a penalty equal to the level of the spell managed by the Fungal Network",
-                "I can end the spell at any time, no action required",
-				"I can do this Wisdom modifier times per Long Rest"
+				"My Culture of Spores radius is now 15ft.",
+				"When an ally in my Culture of Spores forces a saving thow or attack roll, I can increase that DC or roll by 1.",
+				"Or, if they choose to forgo the +1 bonus, and a damaging effect is caused, I can add +1 poison damage per damage die rolled"
 			]),
-			usages : "Wisdom modifier per ",
-			usagescalc : "event.value = Math.max(1, What('Wis Mod'));",
-			recovery : "long rest"
-		},
-		"subclassfeature10.1" : {
-			name : "Symbiotic Entity Improvement",
-			source : ["P:NS",0],
-			minlevel : 10,
-			description : desc([
-				"I choose an option that improves Symbiotic Entity, at 10th and 14th level"
-			]),
-			additional : levels.map(function (n) {
-				if (n < 10) return "";
-				return (n < 14 ? 1 : 2) + "options known"
-			}),
-			extraname : "Symbiote Improvement",
-			extrachoices : ["Clinging Spores", "Enriching Spores", "Fungal Infestation"],
-			extraTimes : levels.map(function (n) {
-				return n < 10 ? 0 : n < 14 ? 1 : 2;
-			}),
-            "clinging spores" : {
-                name : "Clinging Spores",
-				source : ["P:NS", 0],
-                description : desc([
-                    "A creature which fails its saving throw against my Culture of Spores cannot use its reaction until the end of my next turn",
-                    "Any creature counts as being withing my Culture of Spores for 1 turn after they leave it"
-                ])
-            },
-            "enriching spores" : {
-                name : "Enriching Spores",
-				source : ["P:NS", 0],
-                description : desc([
-                    "When an ally within my Culture of Spores forces a save or rolls an attack roll, they can add 1 to their save dc or attack roll.",
-					"Alternatively, they can add 1 poison damamge to every damage die they roll, instead of the initial bonus",
-					"An ally can choose to add 1d4 instead of 1, but in doing so reduce their maximum health by the same amount."
-                ])
-            },
-			"fungal infestation" : {
-				name : "Fungal Infestation",
-				source : ["P:NS", 0],
-				description : desc([
-					"If a creature dies within my Culture of Spores, I can use a reaction to raise them as a zombie if they are humanoid",
-					"If they aren't humanoid, they are raised as before, but solely with melee attacks and necrotic immunity. They lose all other attacks and immunities",
-					"The raised creature shares my initiative, and acts as I command (no action required). If I do not command it, it takes the Dodge action.",
-					"If they fall to 0 again, I lose control. The time frames for resurrection are changed as if by the Gentle Repose spell",
-					"I can control a number of creatures up to my Wisdom modifier."
-				]),
-				action : ["reaction", ""]
-			}
 		},
 		"subclassfeature14" : {
 			name : "Fungal Body",
 			source : ["P:NS",0],
 			minlevel : 14,
 			description : desc([
-				"I'm immune to critical hits"
+				"I'm immune to critical hits, and the paralyzed, stunned, and poisoned conditions"
 			]),
-			savetxt : { immune : ["critical hits (unless incapacitated)"] }
+			savetxt : { immune : [["critical hits (unless incapacitated)"],["paralyzed"], ["stunned"], ["poisoned"] }
 		}
 	}
 });
