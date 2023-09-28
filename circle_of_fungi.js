@@ -56,7 +56,7 @@ AddSubClass("druid", "circle of fungi", {
 			source : ["P:NS",0],
 			minlevel : 2,
  			description : desc([
-				"I am surrounded by a 10ft sphere of my Culture of Spores"
+				"I am surrounded by a 10ft sphere of my Culture of Spores",
 				"All creatures of my choice within my Spores have their speed reduced by 5ft.",
 				"Once one each of my turns, I can choose one creature within my Culture of Spores, and deal necrotic damage to it"
 			]),
