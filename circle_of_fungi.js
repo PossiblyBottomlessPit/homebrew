@@ -56,7 +56,7 @@ AddSubClass("druid", "circle of fungi", {
 			source : ["P:NS",0],
 			minlevel : 2,
  			description : desc([
-				"I am surrounded by a 10ft sphere of my Culture of Spores
+				"I am surrounded by a 10ft sphere of my Culture of Spores"
 				"All creatures of my choice within my Spores have their speed reduced by 5ft.",
 				"Once one each of my turns, I can choose one creature within my Culture of Spores, and deal necrotic damage to it"
 			]),
@@ -70,9 +70,7 @@ AddSubClass("druid", "circle of fungi", {
 			description : desc([
 				"As an action, I can expend a Wild Shape use to boost my spores instead of transforming",
 				"I gain 4 temporary hit points per druid level, I can deal my Culture of Spores damage twice each turn, and the speed decrease doubles",
-				"This lasts for 10 min, until these temporary HP run out, or until I use Wild Shape again",
-                "At 10th and 14th level, I gain a new feature for my symbiotic entity. Use \"choose feature\" above"
-			]),
+				"This lasts for 10 min, until these temporary HP run out, or until I use Wild Shape again",			]),
 			additional : levels.map(function (n) {
 				return n < 2 ? "" : Math.floor(n*4) + " temp HP; Halo of Spores: 2d" + (n < 6 ? 4 : n < 10 ? 6 : n < 14 ? 8 : n < 17 ? 10 : 12);
 			}),
@@ -95,7 +93,7 @@ AddSubClass("druid", "circle of fungi", {
 			description : desc([
 				"My Culture of Spores radius is now 15ft.",
 				"When an ally in my Culture of Spores forces a saving thow or attack roll, I can increase that DC or roll by 1.",
-				"Or, if they choose to forgo the +1 bonus, and a damaging effect is caused, I can add +1 poison damage per damage die rolled"
+				"Or, if they choose to forgo the +1 bonus, and a damaging effect is caused, I can add +1 poison damage per damage die rolled."
 			]),
 		},
 		"subclassfeature14" : {
@@ -103,9 +101,9 @@ AddSubClass("druid", "circle of fungi", {
 			source : ["P:NS",0],
 			minlevel : 14,
 			description : desc([
-				"I'm immune to critical hits, and the paralyzed, stunned, and poisoned conditions"
+				"I'm immune to critical hits unless incapacited, and the blinded, deafened, paralyzed, and poisoned conditions"
 			]),
-			savetxt : { immune : [["critical hits (unless incapacitated)"],["paralyzed"], ["stunned"], ["poisoned"] }
+			savetxt : { immune : ["blinded", "deafened", "paralyzed", "poisoned", "critical hits (unless incapacitated)"] }
 		}
 	}
 });
