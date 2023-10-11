@@ -570,7 +570,7 @@ AddSubClass("bard", "college of epics", { // includes contributions by /u/Holyni
 					spells : ["bless"],
 					selection : ["bless"]
 				}
-			}
+			},
 			"finest of orators" : {
 				name : "Finest of Orators",
 				source : ["P:NS", 1],

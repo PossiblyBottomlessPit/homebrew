@@ -34,7 +34,7 @@ AddSubClass("druid", "circle of fungi", {
 			source : ["P:NS",0],
 			minlevel : 2,
 			description : desc([
-				"I learn the Spare the Dying cantrip with range 30ft and gain the ability to cast certain spells",
+				"I learn an improved Spare the Dying cantrip with range 30ft and gain the ability to cast certain spells",
 				"These are always prepared, but don't count against the number of spells I can prepare"
 			]),
 			spellcastingBonus : {
@@ -58,7 +58,7 @@ AddSubClass("druid", "circle of fungi", {
  			description : desc([
 				"I am surrounded by a 10ft sphere of my Culture of Spores",
 				"All creatures of my choice within my Spores have their speed reduced by 5ft.",
-				"Once one each of my turns, I can choose one creature within my Culture of Spores, and deal necrotic damage to it"
+				"Once on each of my turns, I can choose one creature within my Culture of Spores, and deal necrotic damage to it"
 			]),
 			additional : levels.map(function (n) { return n < 2 ? "" : '1d' + (n < 6 ? 4 : n < 10 ? 6 : n < 14 ? 8 : n < 17 ? 10 : 12) + " necrotic damage"; }),
 			action : ["", "once each of my turns"]
@@ -81,10 +81,13 @@ AddSubClass("druid", "circle of fungi", {
 			source : ["P:NS",0],
 			minlevel : 6,
 			description : desc([
-				"After an ally within my Culture of Spores deals damage on their turn to a hostile creature, I can use a reaction to heal any number of creatures within my Culture of Spores by up to a total of half (rounded up) of the damage that ally did on their turn.",
-	    			"Each time a hostile creature dies in my Culture of Spores, my Culture of Spores damage increases by +1 until my next rest, and I regain one expended first level spell slot."
+				"Wisdom Mod times per long rest, after an ally within my Culture of Spores deals damage on their turn to a hostile creature, I can use a reaction to heal any number of creatures within my Culture of Spores by up to a total of half (rounded up) of the damage that ally did on their turn.",
+	    		"Each time a hostile creature dies in my Culture of Spores, my Culture of Spores damage increases by +1 until my next rest, and I regain one expended first level spell slot."
 			]),
-			action : ["reaction", ""]
+			action : ["reaction", ""],
+			usages : "Wisdom modifier per ",
+			usagescalc : "event.value = Math.max(1, What('Wis Mod'));",
+			recovery : "long rest"
 		},
 		"subclassfeature10" : {
 			name : "Enriching Spores",
@@ -92,7 +95,7 @@ AddSubClass("druid", "circle of fungi", {
 			minlevel : 10,
 			description : desc([
 				"My Culture of Spores radius is now 15ft.",
-				"When an ally in my Culture of Spores forces a saving thow or attack roll, I can increase that DC or roll by 1.",
+				"When an ally in my Symbiote-boosted Culture of Spores forces a saving thow or attack roll, I can increase that DC or attack roll by 1.",
 				"Or, if they choose to forgo the +1 bonus, and a damaging effect is caused, I can add +1 poison damage per damage die rolled."
 			]),
 		},
@@ -101,7 +104,7 @@ AddSubClass("druid", "circle of fungi", {
 			source : ["P:NS",0],
 			minlevel : 14,
 			description : desc([
-				"I'm immune to critical hits unless incapacited, and the blinded, deafened, paralyzed, and poisoned conditions"
+				"I'm immune to the blinded, deafened, paralyzed, and poisoned conditions, and critical hits unless incapacitated"
 			]),
 			savetxt : { immune : ["blinded", "deafened", "paralyzed", "poisoned", "critical hits (unless incapacitated)"] }
 		}
