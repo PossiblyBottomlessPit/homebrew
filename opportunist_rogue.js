@@ -10,7 +10,7 @@
 	Subject:	Subclass
 	Effect:		This script adds:
                     "Opportunist", a subclass for Rogue
-				This subclass is made by PossiblyBottomlessPit/inky/Fredrik Williamson
+				This subclass is made by PossiblyBottomlessPit/Fredrik Williamson
 	Code by:	Fredrik Williamson, based on code by MorePurpleMoreBetter
 	Date:		2023-11-21
 */
