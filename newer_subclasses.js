@@ -500,7 +500,7 @@ AddSubClass("sorcerer", "homeric soul", {
 	}
 })
 
-AddSubClass("bard", "college of epics", { // includes contributions by /u/Holynight6
+AddSubClass("bard", "college of epics", { 
 	regExpSearch : /^(?=.*(college|bard|minstrel|troubadour|jongleur))(?=.*(epic|homer|homeric|warrior|poet)).*$/i,
 	subname : "College of Epics",
 	source : ["P:NS", 7],
@@ -1087,7 +1087,7 @@ AddSubClass("wizard", "anarchy", {
 			minlevel : 2,
 			description : desc([
 				"When I cast a spell of 1st level of higher without using a ritual, I can roll my Anarchy die. If the roll is less than or equal to my proficiency bonus, I can target an additional creature within 60ft with the spell",
-				"A creature targeted by an area of effect in this way counts as being within the area until the end of your next turn",
+				"A creature targeted by an area of effect in this way counts as being within the area until the end of your my turn",
 			])
 		},
 		"subclassfeature2.2" : {
@@ -1232,11 +1232,6 @@ AddSubClass("barbarian", "conduit", {
 	source : [["P:NS", 6]],
 	abilitySave : 3,
 	spellcastingFactor : 3,
-	spellcastingList : {
-		"class" : "wizard",
-		school : ["Ench", "Illus"],
-		level : [0, 4]
-	},
 	spellcastingKnown : {
 		cantrips : [0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3],
 		spells : [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13]

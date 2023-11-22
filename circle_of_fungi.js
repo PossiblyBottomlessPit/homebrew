@@ -81,13 +81,8 @@ AddSubClass("druid", "circle of fungi", {
 			source : ["P:NS",0],
 			minlevel : 6,
 			description : desc([
-				"Wisdom Mod times per long rest, after an ally within my Culture of Spores deals damage on their turn to a hostile creature, I can use a reaction to heal any number of creatures within my Culture of Spores by up to a total of half (rounded up) of the damage that ally did on their turn.",
-	    		"Each time a hostile creature dies in my Culture of Spores, my Culture of Spores damage increases by +1 until my next rest, and I regain one expended first level spell slot."
+	    		"Each time a hostile creature dies in my Culture of Spores, my Culture of Spores damage increases by +1 until my next rest, and I can regain one expended first level spell slot."
 			]),
-			action : ["reaction", ""],
-			usages : "Wisdom modifier per ",
-			usagescalc : "event.value = Math.max(1, What('Wis Mod'));",
-			recovery : "long rest"
 		},
 		"subclassfeature10" : {
 			name : "Enriching Spores",
