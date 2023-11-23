@@ -81,7 +81,8 @@ AddSubClass("druid", "circle of fungi", {
 			source : ["P:NS",0],
 			minlevel : 6,
 			description : desc([
-	    		"Each time a hostile creature dies in my Culture of Spores, my Culture of Spores damage increases by +1 until my next rest, and I can regain one expended first level spell slot."
+	    		"Each time a hostile creature dies in my Culture of Spores, I can increase my Culture of Spores damage by +1 until my next rest, and I can regain one expended first level spell slot.",
+				"If I do this, that creature cannot be brought to life for a day."
 			]),
 		},
 		"subclassfeature10" : {
@@ -90,8 +91,8 @@ AddSubClass("druid", "circle of fungi", {
 			minlevel : 10,
 			description : desc([
 				"My Culture of Spores radius is now 15ft.",
-				"When an ally in my Symbiote-boosted Culture of Spores forces a saving thow or attack roll, I can increase that DC or attack roll by 1.",
-				"Or, if they choose to forgo the +1 bonus, and a damaging effect is caused, I can add +1 poison damage per damage die rolled."
+				"Once per turn, when an ally in my Symbiote-boosted Culture of Spores forces a saving thow or makes an attack roll, I can increase that DC or attack roll by 1.",
+				"If that ally successfully caused damage to a creature also within my culture of spores, I can inflict the poisoned condition on that creature."
 			]),
 		},
 		"subclassfeature14" : {
