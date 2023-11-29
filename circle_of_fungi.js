@@ -61,7 +61,7 @@ AddSubClass("druid", "circle of fungi", {
 				"Once on each of my turns, I can choose one creature within my Culture of Spores, and deal necrotic damage to it"
 			]),
 			additional : levels.map(function (n) { return n < 2 ? "" : '1d' + (n < 6 ? 4 : n < 10 ? 6 : n < 14 ? 8 : n < 17 ? 10 : 12) + " necrotic damage"; }),
-			action : ["", "once each of my turns"]
+			action : ["bonus action", "Spores: Free Action"]
 		},
 		"subclassfeature2.2" : {
 			name : "Symbiote",
