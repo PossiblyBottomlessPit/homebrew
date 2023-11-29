@@ -34,7 +34,7 @@ AddSubClass("druid", "circle of fungi", {
 			source : ["P:NS",0],
 			minlevel : 2,
 			description : desc([
-				"I learn an improved Spare the Dying cantrip with range 30ft and gain the ability to cast certain spells",
+				"I learn an improved Spare the Dying cantrip with range 15ft and gain the ability to cast certain spells",
 				"These are always prepared, but don't count against the number of spells I can prepare"
 			]),
 			spellcastingBonus : {
@@ -46,7 +46,7 @@ AddSubClass("druid", "circle of fungi", {
 				"spare the dying" : {
 					time : "1 a",
 					description : "A living creature that has 0 hit points that you can see within range gains 1 hit point. This spell has no effect on undead or constructs.",
-					range : "30 ft"
+					range : "15 ft"
 				}
 			},
 			spellcastingExtra : ["aid", "gentle repose", "animate dead", "revivify", "death ward", "freedom of movement", "cloudkill", "reincarnate"]
@@ -91,8 +91,8 @@ AddSubClass("druid", "circle of fungi", {
 			minlevel : 10,
 			description : desc([
 				"My Culture of Spores radius is now 15ft.",
-				"Once per turn, when an ally in my Symbiote-boosted Culture of Spores forces a saving thow or makes an attack roll, I can increase that DC or attack roll by 1.",
-				"If that ally successfully caused damage to a creature also within my culture of spores, I can inflict the poisoned condition on that creature."
+				"Once per turn, when an ally in my Symbiote-boosted Culture of Spores forces a saving thow or makes an attack roll, I can increase that DC by 1 or attack roll by 2.",
+				"If that ally successfully caused damage to a creature also within my culture of spores, I can inflict the poisoned condition on that creature until the end of my next turn, if they fail a Consitution saving through against my Spell Save DC."
 			]),
 		},
 		"subclassfeature14" : {
