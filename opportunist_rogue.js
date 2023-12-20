@@ -31,7 +31,7 @@ AddSubClass("rogue", "opportunist", {
 			source : [["P:NS", 3]],
 			minlevel : 3,
 			description : desc([
-				"As a bonus action, I can ready an action",
+				"As a bonus action, I can ready an action. I can only ready an attack or a spell that forces a saving throw in this way if the target creature cannot see when I do the bonus action",
 				"I can do one readied action each round without using a reaction"
 			]),
 			action : [["bonus action", ""]]
@@ -40,10 +40,10 @@ AddSubClass("rogue", "opportunist", {
 			name : "Escapist",
 			source : [["P:NS", 3]],
 			minlevel : 3,
-			description : "\n   " + "I gain advantage on initiative rolls, and on checks to escape from anything keeping me trapped, confined, or restrained",
+			description : "\n   " + "I gain advantage on initiative rolls, and on checks to escape from anything keeping me confined, or Restrained",
 			advantages : [["initiative", true]],
 			savetxt : {
-				adv_vs : ["being confined, trapped, or restrained"]
+				adv_vs : ["being confined, or Restrained"]
 			},
 		},
 		"subclassfeature9" : {
@@ -60,7 +60,7 @@ AddSubClass("rogue", "opportunist", {
 			source : [["P:NS", 3]],
 			minlevel : 13,
 			description : desc([
-				"My opportunity attacks can always add my sneak attack damage, as long as I do not have disadvantage on the attack"
+				"My opportunity attacks can always add my sneak attack damage, as long as I do not have disadvantage on the attack, even if I've already used sneak attack this turn."
 			])
 		},
 		"subclassfeature17" : {
