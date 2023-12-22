@@ -31,7 +31,7 @@ AddSubClass("rogue", "opportunist", {
 			source : [["P:NS", 3]],
 			minlevel : 3,
 			description : desc([
-				"As a bonus action, I can ready an action. I can only ready an attack or a spell that forces a saving throw in this way if the target creature cannot see when I do the bonus action",
+				"As a bonus action, I can ready an action. I can only ready an attack or a spell that forces a saving throw in this way if the target creature cannot see me when I do the bonus action",
 				"I can do one readied action each round without using a reaction"
 			]),
 			action : [["bonus action", ""]]
