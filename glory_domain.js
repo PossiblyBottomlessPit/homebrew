@@ -134,7 +134,7 @@ AddSubClass("cleric", "glory domain", {
 			source : [["P:NS", 4]],
 			minlevel : 17,
 			description : desc([
-                "I have divine control over fate. I can change my destiny without taking a rest once each long rest.",
+                "I have divine control over fate. Once on my turn between each long rest, I can change my Destiny. I immediately gain the benefits of my new Destiny, and lose the benefits of my previous Destiny.",
                 "Additionally, my Poet's Encouragement Channel Divinity now works with saving throws as well as ability checks and attack rolls"
 			]),
 		}
