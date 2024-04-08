@@ -95,7 +95,8 @@ AddSubClass("cleric", "glory domain", {
 			source : [["P:NS", 4]],
 			minlevel : 2,
 			description : desc([
-				"Using my reaction, an ally that can hear or see me within 15ft can reroll any ability check or attack roll, choose the higher result, and add my Wisdom modifier"
+				"Using my reaction, an ally that can hear or see me within 15ft can reroll any ability check or attack roll, choose the higher result, and add my Wisdom modifier",
+				"This reaction can be taken after seeing the roll, but before any of the effects take place"
 			]),
             action : ["reaction", ""]
 		},
