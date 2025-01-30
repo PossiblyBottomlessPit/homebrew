@@ -63,7 +63,7 @@ AddSubClass("druid", "circle of fungi", {
 			source : ["P:NS",0],
 			minlevel : 2,
  			description : desc([
-				"As a reaction when someone I can see in 10 ft starts its turn or moves, I can have it save",
+				"As a reaction when a creature I can see within 10 ft of me starts its turn or moves, I can have it save",
 				"It must succeed on a Constitution save or take necrotic damage from my cloud of spores and be slowed by 5ft",
                 "On a success, it chooses one effect"
 			]),
@@ -90,7 +90,7 @@ AddSubClass("druid", "circle of fungi", {
 			source : ["P:NS",0],
 			minlevel : 6,
 			description : desc([
-				"As a reaction, at the end of a turn in which an ally deals damage to a hostile creature, I can reallocate the same value of HP as damage dealt in that ally's turn to the creature any creatures.",
+				"As a reaction, at the end of a turn in which an ally deals damage to a hostile creature, I can reallocate the same value of HP as damage dealt in that ally's turn to any creatures.",
                 "All of the Attacker, Target, and those being healed must be in my Culture of Spores.",
 			]),
 			action : ["reaction", ""]
@@ -160,7 +160,7 @@ AddSubClass("druid", "circle of fungi", {
 			source : ["P:NS",0],
 			minlevel : 14,
 			description : desc([
-				"I'm immune to critical hits"
+				"I'm immune to critical hits unless incapacitated"
 			]),
 			savetxt : { immune : ["critical hits (unless incapacitated)"] }
 		}
@@ -407,7 +407,7 @@ AddSubClass("sorcerer", "homeric soul", {
 				submenu : "[sorcerer level 14]",
 				prereqeval : function(v) { return classes.known.sorcerer.level >= 14; },
 				description : desc([
-					"I gain half-proficiency in Dexterity, Constitution, and Strength saving throws"
+					"I gain half-proficiency in Dexterity, Constitution, and Strength saving throws, if I do not already have proficiency in them"
 				]),
 				savetxt : "Half-proficiency in Con, Dex, & Str saving throws (not calculated above)"
 			},
@@ -917,7 +917,7 @@ AddSubClass("bard", "college of epics", {
 			source : ["P:NS", 1], 
 			minlevel : 14,
 			description : desc([
-				"If I miss an attack roll or a creature fails a save against one of my bard spells, I can spend roll another d20, and choose which roll is used",
+				"If I miss an attack roll or a creature succeeds a save against one of my bard spells, I can spend roll another d20, and choose which roll is used",
 				"I can do this once per long rest, and additional times if I expend a use of my Bardic Inspiration"
 			]),
 			recovery : "long rest",
@@ -953,11 +953,11 @@ AddSubClass("cleric", "beauty domain", {
 			usagescalc : "event.value = Math.max(1, What('Wis Mod'));",
 			recovery : "long rest",
 			description : desc([
-				"As an action, I can appear as a creature's ideal of beauty or revulsion, and if that creature can see me, they must succeed a Wisdom saving throw or be charmed or frightened by me",
+				"As an action, I can appear as a creature's ideal of beauty or revulsion, and if that creature can see me, they must succeed a Wisdom saving throw or be charmed (ideal of beauty) or frightened (ideal of revulsion) by me",
 				"A creature charmed in this way will follow as best as they can my instructions, unless it puts them in apparent physical harm",
-				"A creature frightened in this way must use its movement each turn to run away from me, unless it puts them in apparent physical harm",
+				"A creature frightened in this way must use all its movement each turn to run away from me, unless it puts them in apparent physical harm",
 				"The effect ends if I or one of my allies physically harm the creature, or after 10 minutes",
-				"This can affect a number of creatures equal to my Wisdom modifier, a number of times per long rest equal to my Wisdom modifier"
+				"I can do this a number of times per long rest equal to my Wisdom modifier, and regain one use at the end of a short rest"
 			])
 		},
 		"subclassfeature2" : {
@@ -1048,7 +1048,7 @@ AddSubClass("rogue", "opportunist", {
 			source : [["P:NS", 3]],
 			minlevel : 13,
 			description : desc([
-				"My opportunity attacks can always add my sneak attack damage, as long as I do not have disadvantage on the attack"
+				"My opportunity attacks can always add my sneak attack damage, as long as I do not have disadvantage on the attack. I can still only do one sneak attack each turn."
 			])
 		},
 		"subclassfeature17" : {
@@ -1086,7 +1086,7 @@ AddSubClass("wizard", "anarchy", {
 			source : [["P:NS", 4]],
 			minlevel : 2,
 			description : desc([
-				"When I cast a spell of 1st level of higher without using a ritual, I can roll my Anarchy die. If the roll is less than or equal to my proficiency bonus, I can target an additional creature within 60ft with the spell",
+				"When I cast a spell of 1st level of higher without using a ritual, I can roll my Anarchy die. If the roll is less than my proficiency bonus, I can target an additional creature within 60ft with the spell",
 				"A creature targeted by an area of effect in this way counts as being within the area until the end of your my turn",
 			])
 		},
@@ -1095,7 +1095,7 @@ AddSubClass("wizard", "anarchy", {
 			source : [["P:NS", 4]],
 			minlevel : 2,
 			description : desc([
-				"Proficiency Bonus times per Long Rest, when I roll initiative, I can roll my Anarchy die. If the roll is less than or equal to my proficiency bonus, I can choose which creature is at the top of the initiative order",
+				"Proficiency Bonus times per Long Rest, when I roll initiative, I can roll my Anarchy die. If the roll is less than my proficiency bonus, I can choose which creature is at the top of the initiative order",
 			]), 
 			usages : "Proficiency Bonus per",
 			usagescalc : "event.value = How('Proficiency Bonus');", 
