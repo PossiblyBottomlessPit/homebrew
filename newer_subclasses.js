@@ -17,8 +17,8 @@
 					"Anarchist" subclass for Wizard;
 					"the Primordial" subclass for Warlock;
 					"Path of the Conduit" subclass for Barbarian.
-				These subclasses are made by PossiblyBottomlessPit/inky/Fredrik Williamson
-	Code by:	Fredrik Williamson, based on code by MorePurpleMoreBetter
+				These subclasses are made by PossiblyBottomlessPit/inky
+	Code by:	PossiblyBottomlessPit, based on code by MorePurpleMoreBetter
 	Date:		2023-05-09
 */
 
@@ -1319,4 +1319,5 @@ AddSubClass("barbarian", "conduit", {
 			usages : 1
 		}
 	}
+
 });
