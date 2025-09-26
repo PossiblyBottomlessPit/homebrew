@@ -1020,7 +1020,6 @@ AddSubClass("rogue", "opportunist", {
 			minlevel : 3,
 			description : desc([
 				"As a bonus action, I can ready an action",
-				"I can do one readied action each round without using a reaction"
 			]),
 			action : [["bonus action", ""]]
 		},
@@ -1038,9 +1037,9 @@ AddSubClass("rogue", "opportunist", {
 			name : "Quick Reflexes",
 			source : [["P:NS", 3]],
 			minlevel : 9,
-			description : "\n   " + "I can take 2 reaction each round, which scales to 3 at 13th level in this class and 4 at 17th level",
+			description : "\n   " + "I can take 2 reaction each round, which scales to 3 at 17th level in this class",
 			additional : levels.map(function (n) {
-				return n < 9 ? 1 : (n < 13 ? 2 : n < 17 ? 3 : 4) + " reactions";
+				return n < 9 ? 1 : (n < 17 ? 2 : 3) + " reactions";
 			}),
 		},
 		"subclassfeature13" : {
@@ -1056,7 +1055,7 @@ AddSubClass("rogue", "opportunist", {
 			source : [["P:NS", 3]],
 			minlevel : 17,
 			description : desc([
-				"When a creature that I can see within my range fails an attack roll or saving throw, I can make an opportunity attack against them as a reaction"
+				"When a creature that I can see within my weapon's range fails an attack roll or saving throw, I can make an opportunity attack against them as a reaction"
 			]),
 			action : ["reaction", " as an opportunity attack"]
 		}
@@ -1086,8 +1085,8 @@ AddSubClass("wizard", "anarchy", {
 			source : [["P:NS", 4]],
 			minlevel : 2,
 			description : desc([
-				"When I cast a spell of 1st level of higher without using a ritual, I can roll my Anarchy die. If the roll is less than my proficiency bonus, I can target an additional creature within 60ft with the spell",
-				"A creature targeted by an area of effect in this way counts as being within the area until the end of your my turn",
+				"When I cast a spell of 1st level of higher using a spell slot, I can roll my Anarchy die. If the roll is less than my Intelligence modifier, I can target an additional creature within 60ft with the spell",
+				"A creature targeted by an area of effect in this way counts as being within the area until the end of their next turn",
 			])
 		},
 		"subclassfeature2.2" : {
@@ -1138,7 +1137,7 @@ AddSubClass("warlock", "the Primordial", {
 	regExpSearch : /^(?=.*warlock)(?=.*primordial).*$/i,
 	subname : "the Primordial",
 	source : [["P:NS", 5]],
-	spellcastingExtra : ["absorb elements", "entangle", "spike growth", "pass without trace", "plant growth", "call lightning", "polymorph", "freedom of movement", "awaken", "wall of stone"],
+	spellcastingExtra : ["absorb elements", "entangle", "spike growth", "pass without trace", "plant growth", "call lightning", "polymorph", "freedom of movement", "awaken", "transmute rock"],
 	features : {
 		"subclassfeature1" : {
 			name : "Awakened Earth",
@@ -1146,8 +1145,8 @@ AddSubClass("warlock", "the Primordial", {
 			minlevel : 1,
 			description : desc([
 				"As an action, I can choose 6 5ft cubves, and fill them with any combination of earth, vines, or flowers. If an affected cube is not at ground level it must be connected to ground by another cube or solid structure",
-				"I can only fill an occupied cube with earth if there is sufficient room directly above it, in which case it is forced upwards. I must either fill all of a huge or larger creature's space with earth, or none of it",
-				"Earth provides total cover, vines provide half cover and are difficult terrain, and flowers heal any creature of my choice who enters them for a d8 + my warlock level",
+				"I can only fill an occupied cube with earth if there is sufficient room directly above it, in which case the creature is forced upwards. I must either fill all of a huge or larger creature's space with earth, or none of it",
+				"Earth provides total cover, vines provide half cover and are difficult terrain, and flowers heal any creature of my choice who enters them for a d8 + my warlock level, once per creature per round",
 				"Each of these cubes can be cleared by hand, taking 1 minute for an earthen cube, half as much for vines, and 12 seconds (or two subsequent actions) for flowers"
 			]),
 			action : [["action", ""]],
@@ -1171,7 +1170,7 @@ AddSubClass("warlock", "the Primordial", {
 			minlevel : 6,
 			description : desc([
 				"I cannot be moved against my will if I am on the ground. Creatures have disadvantage on any saving throws to resist being moved by me or one of my spells or magical effects",
-				"I know the thorn whip cantrip, and can cast the grasping vine spell once per long rest without using a spell slot, or with any spell slots I have. I do not need to concentrate on this spell and it lasts its full duration"
+				"I know the thorn whip cantrip (or learn a warlock cantrip of my choicce if I already knoe it) which does not count against my number of cantrips known, and can cast the grasping vine spell once per long rest without using a spell slot, or with any spell slots I have. I do not need to concentrate on this spell and it lasts its full duration"
 			]),
 			spellcastingBonus : [{
 				name : "Grasp of the Earth",
@@ -1204,7 +1203,7 @@ AddSubClass("warlock", "the Primordial", {
 			source : [["P:NS", 5]],
 			minlevel : 10,
 			description : desc([
-				"For 1 minute, proficiency bonus times per long rest, I can become either a mighty tree or a grasping vine as abonus action",
+				"For 1 minute, proficiency bonus times per long rest, I can become either a mighty tree or a reaching vine as abonus action",
 				"Tree: size becomes huge; I gain temp HP equal to my warlock level; I can make any area within 5ft of me difficult terrain that moves with me; my unarmed strikes have reach of 10ft, deal 3d8 magical bludgeoning damage and can push 10ft on a hit; I have advantage on perception checks and have tremorsense 120ft.",
 				"Vine: size becomes tiny with 10ft reach; I can grapple any creature that enters my reach and add my charisma modifier to the DC, without needing a free hand; I gain a climbing speed equal to my walking speed."
 			]),
@@ -1321,3 +1320,4 @@ AddSubClass("barbarian", "conduit", {
 	}
 
 });
+
