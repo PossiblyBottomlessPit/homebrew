@@ -9,4 +9,4 @@ the_primordial.js (Warlock, the Primordial Patron);
 beauty_domain.js (Cleric, Beauty Domain).
 
 ## Draft
-Newer_Subclasses.js is a draft document.
+newer_subclasses.js is a draft document.
