@@ -9,9 +9,9 @@
 /*	-INFORMATION-
 	Subject:	Subclass
 	Effect:		This script adds:
-					"Circle of Fungi" subclass for Druid, which is loosely a Spores rework. It therefore contains some feature names and features that are similar or identical to features published by D&D and WOTC/Hasbro, and Fredrik Williamson does not claim any rights to those names or feature ideas;
-				These subclasses are made by PossiblyBottomlessPit/inky/Fredrik Williamson
-	Code by:	Fredrik Williamson, based on code by MorePurpleMoreBetter
+					"Circle of Fungi" subclass for Druid, which is loosely a Spores rework. It therefore contains some feature names and features that are similar or identical to features published by D&D and WOTC/Hasbro, and I does not claim any rights to those names or feature ideas;
+				These subclasses are made by PossiblyBottomlessPit
+	Code by:	PossiblyBottomlessPit, based on code by MorePurpleMoreBetter
 	Date:		2023-05-09
 */
 

@@ -10,8 +10,8 @@
 	Subject:	Subclass
 	Effect:		This script adds:
 					"Glory Domain" subclass for Cleric.
-				These subclasses are made by PossiblyBottomlessPit/inky/Fredrik Williamson
-	Code by:	Fredrik Williamson, based on code by MorePurpleMoreBetter
+				These subclasses are made by PossiblyBottomlessPit
+	Code by:	PossiblyBottomlessPit, based on code by MorePurpleMoreBetter
 	Date:		2023-05-09
 */
 

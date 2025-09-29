@@ -10,10 +10,13 @@
 	Subject:	Subclass
 	Effect:		This script adds:
                     "Opportunist", a subclass for Rogue
-				This subclass is made by PossiblyBottomlessPit/Fredrik Williamson
-	Code by:	Fredrik Williamson, based on code by MorePurpleMoreBetter
+				This subclass is made by PossiblyBottomlessPit
+	Code by:	PossiblyBottomlessPit, based on code by MorePurpleMoreBetter
 	Date:		2023-11-21
 */
+
+var iFileName = "opportunist_rogue.js";
+RequiredSheetVersion(12.999);
 
 SourceList["P:NS"] = {
 	name : "PossiblyBottomlessPit - New Subclasses",
@@ -50,9 +53,9 @@ AddSubClass("rogue", "opportunist", {
 			name : "Quick Reflexes",
 			source : [["P:NS", 3]],
 			minlevel : 9,
-			description : "\n   " + "I can take 2 reaction each round, which scales to 3 at 13th level in this class and 4 at 17th level",
+			description : "\n   " + "I can take 2 reaction each round, which scales to 3 at 17th level in this class",
 			additional : levels.map(function (n) {
-				return n < 9 ? 1 : (n < 13 ? 2 : n < 17 ? 3 : 4) + " reactions";
+				return n < 9 ? 1 : (n < 17 ? 2 : 3) + " reactions";
 			}),
 		},
 		"subclassfeature13" : {
@@ -60,7 +63,7 @@ AddSubClass("rogue", "opportunist", {
 			source : [["P:NS", 3]],
 			minlevel : 13,
 			description : desc([
-				"My opportunity attacks can always add my sneak attack damage, as long as I do not have disadvantage on the attack, even if I've already used sneak attack this turn."
+				"My opportunity attacks can always add my sneak attack damage, as long as I do not have disadvantage on the attack. I can still sneak attack only once per turn."
 			])
 		},
 		"subclassfeature17" : {

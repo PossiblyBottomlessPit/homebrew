@@ -9,7 +9,7 @@
 /*	-INFORMATION-
 	Subject:	Subclass
 	Effect:		This script adds:
-					"Circle of Fungi" subclass for Druid, which is loosely a Spores rework. It therefore contains some feature names and features that are similar or identical to features published by D&D and WOTC, and Fredrik Williamson does not claim any rights to those names or feature ideas;
+					"Circle of Fungi" subclass for Druid, which is loosely a Spores rework. It therefore contains some feature names and features that are similar or identical to features published by D&D and WOTC, and I does not claim any rights to those names or feature ideas;
                 	"Homeric Soul" subclass for Sorcerer;
 					"Homeric Soul" subclass for Bard;
 					"Beauty Domain" subclass for Cleric;
@@ -17,7 +17,7 @@
 					"Anarchist" subclass for Wizard;
 					"the Primordial" subclass for Warlock;
 					"Path of the Conduit" subclass for Barbarian.
-				These subclasses are made by PossiblyBottomlessPit/inky
+				These subclasses are made by PossiblyBottomlessPit
 	Code by:	PossiblyBottomlessPit, based on code by MorePurpleMoreBetter
 	Date:		2023-05-09
 */
