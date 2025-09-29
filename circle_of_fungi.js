@@ -100,7 +100,7 @@ AddSubClass("druid", "circle of fungi", {
 			source : ["P:NS",0],
 			minlevel : 14,
 			description : desc([
-				"I'm immune to the blinded, deafened, paralyzed, and poisoned conditions, and critical hits unless incapacitated"
+				"I'm immune to the blinded, deafened, paralyzed, and poisoned conditions, and, unless incapacitated, critical hits"
 			]),
 			savetxt : { immune : ["blinded", "deafened", "paralyzed", "poisoned", "critical hits (unless incapacitated)"] }
 		}
