@@ -873,8 +873,6 @@ AddSubClass("cleric", "beauty domain", {
 	}
 });
 
-
-
 AddSubClass("wizard", "anarchy", {
 	regExpSearch : /(anarchy|anarchist)/i,
 	subname : "School of Anarchy",
@@ -1037,6 +1035,7 @@ AddSubClass("warlock", "the Primordial", {
 		}
 	}
 });
+
 AddSubClass("barbarian", "conduit", {
 	regExpSearch : /(conduit)/i,
 	subname : "Path of the Conduit",
@@ -1133,4 +1132,3 @@ AddSubClass("barbarian", "conduit", {
 	}
 
 });
-

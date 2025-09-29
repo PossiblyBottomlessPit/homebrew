@@ -4,3 +4,4 @@
 
 circle_of_fungi.js (Druid, Circle of Fungi);
 opportunist_rogue.js (Rogue, Opportunist);
+glory_domain.js (Cleric, Glory Domain);

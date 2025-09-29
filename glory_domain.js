@@ -28,7 +28,7 @@ AddSubClass("cleric", "glory domain", {
 	regExpSearch : /^(?=.*(cleric|priest|clergy|acolyte))(?=.*(glory|homer|poet)).*$/i,
 	subname : "Glory Domain",
 	source : [["P:NS", 4]],
-	spellcastingExtra : ["absorb elements", "thunderous smite", "enlarge/reduce", "find steed", "haste", "fear", "find greater steed", "staggering smite", "circle of power", "wall of light"],
+	spellcastingExtra : ["absorb elements", "thunderous smite", "enlarge/reduce", "enthrall", "haste", "fear", "find greater steed", "staggering smite", "circle of power", "wall of light"],
 	spellcastingList : {
         "class" : ["cleric", "bard"]
     },
@@ -106,7 +106,7 @@ AddSubClass("cleric", "glory domain", {
 			minlevel : 6,
 			description : desc([
                 "At the end of each rest, I can extend the benefits of my destiny spell to a number of allies equal to my Wisdom modifier (minimum of 1), as long as they remain within 30ft of me",
-                "Additionally, each Destiny spell has a greater effect. Leader's Gift of Alacrity also adds my Proficiency bonus to initiative; Protector's Armor of Agathys is upcast to the highest level of spell slots I have available, up to 5th level; Victor's Divine Favor adds an additional 1d4"
+                "Additionally, each Destiny spell has a greater effect. Leader's Gift of Alacrity also adds my Proficiency bonus to initiative; Protector's Armor of Agathys is treated as being cast at the highest level of spell slots I have available, up to 5th level; Victor's Divine Favor adds an additional 1d4"
             ]),
             additional : Math.max(1, What('Wis Mod')) + " additional creatures affected"
 		},
@@ -135,7 +135,7 @@ AddSubClass("cleric", "glory domain", {
 			source : [["P:NS", 4]],
 			minlevel : 17,
 			description : desc([
-                "I have divine control over fate. Once on my turn between each long rest, I can change my Destiny. I immediately gain the benefits of my new Destiny, and lose the benefits of my previous Destiny.",
+                "I have divine control over fate. On my turn, I can change my Destiny. Along with any others affected by Shared Destiny, I immediately gain the benefits of my new Destiny, and lose the benefits of my previous Destiny. I can do this once and regain my use of it and the end of each long rest.",
                 "Additionally, my Poet's Encouragement Channel Divinity now works with saving throws as well as ability checks and attack rolls"
 			]),
 		}
