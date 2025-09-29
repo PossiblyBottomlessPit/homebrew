@@ -15,7 +15,7 @@
 	Date:		2023-05-09
 */
 
-var iFileName = "Circle of Fungi.js";
+var iFileName = "Glory Domain.js";
 RequiredSheetVersion(12.999);
 
 SourceList["P:NS"] = {
@@ -140,4 +140,5 @@ AddSubClass("cleric", "glory domain", {
 			]),
 		}
 	}
+
 });
