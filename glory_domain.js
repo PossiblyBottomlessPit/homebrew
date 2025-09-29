@@ -28,7 +28,7 @@ AddSubClass("cleric", "glory domain", {
 	regExpSearch : /^(?=.*(cleric|priest|clergy|acolyte))(?=.*(glory|homer|poet)).*$/i,
 	subname : "Glory Domain",
 	source : [["P:NS", 4]],
-	spellcastingExtra : ["absorb elements", "thunderous smite", "enlarge/reduce", "shatter", "haste", "fear", "find greater steed", "staggering smite", "circle of power", "wall of light"],
+	spellcastingExtra : ["heroism", "thunderous smite", "enlarge/reduce", "shatter", "haste", "fear", "find greater steed", "staggering smite", "circle of power", "wall of light"],
 	spellcastingList : {
         "class" : ["cleric", "bard"]
     },
@@ -142,3 +142,4 @@ AddSubClass("cleric", "glory domain", {
 	}
 
 });
+
