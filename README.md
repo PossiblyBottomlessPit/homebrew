@@ -7,3 +7,6 @@ opportunist_rogue.js (Rogue, Opportunist);
 glory_domain.js (Cleric, Glory Domain);
 the_primordial.js (Warlock, the Primordial Patron);
 beauty_domain.js (Cleric, Beauty Domain).
+
+## Draft
+Newer_Subclasses.js is a draft document.
